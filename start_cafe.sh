@@ -16,7 +16,7 @@ cd ..
 
 # Wait for backend port 3010 to be available (max 15s)
 echo "Waiting for backend to start on port 3010..."
-for i in {1..15}; do
+for i in $(seq 1 15); do
   if ss -ltn | grep -q ':3010'; then
     echo "Backend server is running!"
     break
