@@ -395,4 +395,4 @@ app.get('/customerSummary/:customer_id', (req, res) => {
   });
   
 
-app.listen(3020, () => console.log('Server running on port 3010'));
+app.listen(3010, () => console.log('Server running on port 3010'));
