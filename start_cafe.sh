@@ -17,14 +17,14 @@ cd ..
 # Wait for backend port 3010 to be available (max 15s)
 echo "Waiting for backend to start on port 3010..."
 for i in $(seq 1 15); do
-  if ss -ltn | grep -q ':3010'; then
+  if netstat -tln | grep -q ':3010'; then
     echo "Backend server is running!"
     break
   fi
   sleep 1
 done
 
-if ! ss -ltn | grep -q ':3010'; then
+if ! netstat -tln | grep -q ':3010'; then
   echo "Backend failed to start."
   kill $BACKEND_PID
   exit 1
