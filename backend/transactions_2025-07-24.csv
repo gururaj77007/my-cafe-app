@@ -1,0 +1,4 @@
+id,customer_id,amount,description,type,timestamp
+1,1,1200,month and diew,credit,2025-07-24T05:40:08.621Z
+2,2,2000,make,credit,2025-07-24T06:06:55.956Z
+3,2,2000,marlbro advance,credit,2025-07-24T06:42:14.771Z
