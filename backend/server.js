@@ -7,13 +7,9 @@ const fs = require('fs');
 const { exec } = require('child_process');
 
 const app = express();
-const corsOptions = {
-    origin: 'http://localhost:3002', // adjust if running React app on different IP:port in Android
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
-  };
+
   
-  app.use(cors(corsOptions));
+  app.use(cors());
 app.use(express.json());
 
 const db = new sqlite3.Database('./cafe.db');
